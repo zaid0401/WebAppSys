@@ -9,8 +9,12 @@ public class schnittController {
     @Autowired
     private schnittservice service;
 
-    public double getNotenschnitt(double[] noten) {
-        return service.berechneNotenschnitt(noten);
+    //public double getNotenschnitt(double[] noten) {
+     //   return service.berechneNotenschnitt();
+    //}
+
+    public double getNotenschnitt() {
+        return service.berechneNotenschnitt();
     }
 
 }

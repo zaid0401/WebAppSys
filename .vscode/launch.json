@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ApplicationService",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.ApplicationService",
+            "projectName": "SpringDependencyInjection"
+        },
+        {
+            "type": "java",
+            "name": "ApplicationService",
+            "request": "launch",
+            "mainClass": "Counter.Application.ApplicationService",
+            "projectName": "SpringDependencyInjection"
+        },
+        {
+            "type": "java",
+            "name": "schnittApplication",
+            "request": "launch",
+            "mainClass": "notenschnitt.schnittApplication",
+            "projectName": "BeanExample"
+        },
+        {
+            "type": "java",
             "name": "BeanExampleApplicationV2",
             "request": "launch",
             "mainClass": "edu.fra.uas.BeanExampleApplicationV2",

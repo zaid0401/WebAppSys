@@ -34,6 +34,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!-- Explicitly set the main class to avoid ambiguity when multiple mains exist -->
+					<mainClass>edu.fra.uas.ApplicationService</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

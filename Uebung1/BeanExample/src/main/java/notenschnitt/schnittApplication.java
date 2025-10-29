@@ -23,7 +23,7 @@ public class schnittApplication {
     @Bean
     CommandLineRunner init () {
     return args -> {
-    double schnitt = controller.getNotenschnitt(new double[]{1.3, 2.0, 1.7});
+    double schnitt = controller.getNotenschnitt();
             log.info("Notenschnitt: " + schnitt);
     };
     }
