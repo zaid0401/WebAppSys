@@ -5,9 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import java.util.List;
 import org.springframework.ui.Model;
-//import org.springframework.web.bind.annotation.GetMapping;
-//import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 //import org.springframework.web.bind.annotation.RequestBody;
 
 
@@ -19,7 +19,7 @@ public class schnittController {
 
     // 1. Endpunkt zum ANZEIGEN der Notenliste und des Formulars (GET /noten)
     @GetMapping("/noten")
-    public List<Double> showNotenUebersicht (Model model) {
+    public String showNotenUebersicht (Model model) {
 
         // Daten für die View vorbereiten: Notenliste und Durchschnitt
         List<Double> notenListe = service.getNotenListe();
@@ -30,7 +30,7 @@ public class schnittController {
         model.addAttribute("Notenschnitt", notenschnitt);
 
         // Liefere das Template "notenListe.html" aus
-        return notenListe;
+        return "notenListe";
     }
 
     // 2. Endpunkt zur VERARBEITUNG der Formulareingabe (POST /noten/add)
