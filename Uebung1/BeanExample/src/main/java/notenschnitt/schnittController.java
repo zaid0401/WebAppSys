@@ -26,11 +26,11 @@ public class schnittController {
         double notenschnitt = service.berechneNotenschnitt();
 
         // Füge Daten zum Model hinzu, damit das Template darauf zugreifen kann
-        model.addAttribute("Notenliste", notenListe);
-        model.addAttribute("Notenschnitt", notenschnitt);
+        model.addAttribute("notenliste", notenListe);
+        model.addAttribute("notenschnitt", notenschnitt);
 
         // Liefere das Template "notenListe.html" aus
-        return "notenListe";
+        return "noten";
     }
 
     // 2. Endpunkt zur VERARBEITUNG der Formulareingabe (POST /noten/add)
