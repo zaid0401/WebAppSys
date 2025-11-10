@@ -18,7 +18,7 @@ public class schnittController {
     private schnittservice service;
 
     // 1. Endpunkt zum ANZEIGEN der Notenliste und des Formulars (GET /noten)
-    @GetMapping("/noten")
+    @GetMapping("/")
     public String showNotenUebersicht (Model model) {
 
         // Daten für die View vorbereiten: Notenliste und Durchschnitt
