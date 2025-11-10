@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Notenschnitt-Rechner</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table, th, td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        .schnitt { font-weight: bold; color: darkgreen; }
+        </style>
+
+</head>
+<body>
+    <h1>📚 Notenübersicht und Rechner</h1>
+
+    <h2>Aktuelle Noten</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Lfd. Nr.</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="note, iterStat : ${notenListe}">
+                <td th:text="${iterStat.index + 1}">1</td>
+                <td th:text="${note}">1.0</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Notenschnitt: <span class="schnitt" th:text="${notenschnitt}">3.0</span></h2>
+
+    <hr>
+    
+    <h2>Note hinzufügen</h2>
+    <form action="/noten/add" method="POST">
+        <label for="neueNote">Neue Note (1.0 - 5.0):</label><br>
+        <input type="number" id="neueNote" name="neueNote" step="0.1" min="1.0" max="5.0" required><br><br>
+        <button type="submit">Note speichern</button>
+    </form>
+
+</body>
+</html>
