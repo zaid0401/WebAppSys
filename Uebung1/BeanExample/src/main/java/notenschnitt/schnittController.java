@@ -25,9 +25,10 @@ public class schnittController {
         List<Double> notenListe = service.getNotenListe();
         double notenschnitt = service.berechneNotenschnitt();
 
-        // Füge Daten zum Model hinzu, damit das Template darauf zugreifen kann
-        model.addAttribute("notenliste", notenListe);
-        model.addAttribute("notenschnitt", notenschnitt);
+    // Füge Daten zum Model hinzu, damit das Template darauf zugreifen kann
+    // Verwende denselben Attributnamen, den das Template erwartet (notenListe)
+    model.addAttribute("notenListe", notenListe);
+    model.addAttribute("notenschnitt", notenschnitt);
 
         // Liefere das Template "notenListe.html" aus
         return "noten";

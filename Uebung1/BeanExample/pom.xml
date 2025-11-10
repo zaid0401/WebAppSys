@@ -53,6 +53,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!-- Explicit main class to avoid ambiguity when multiple mains exist in the module -->
+					<mainClass>notenschnitt.schnittApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
