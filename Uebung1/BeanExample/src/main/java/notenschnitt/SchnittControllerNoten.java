@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
-public class schnittController {
+public class SchnittControllerNoten {
 
     @Autowired
-    private schnittservice service;
+    private SchnittServiceNoten service;
 
     // 1. Endpunkt zum ANZEIGEN der Notenliste und des Formulars (GET /noten)
-    @GetMapping("/")
+    @GetMapping({"/", "/noten"})
     public String showNotenUebersicht (Model model) {
 
         // Daten für die View vorbereiten: Notenliste und Durchschnitt

@@ -9,15 +9,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class schnittApplication {
+public class SchnittApplicationNoten {
 
-    private static final Logger log = LoggerFactory.getLogger(schnittApplication.class);
+    private static final Logger log = LoggerFactory.getLogger(SchnittApplicationNoten.class);
 
     //@Autowired
     //private schnittController controller;
 
     public static void main(String[] args) {
-        SpringApplication.run(schnittApplication.class, args);
+        SpringApplication.run(SchnittApplicationNoten.class, args);
     }
 
 //    @Bean

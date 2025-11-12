@@ -11,9 +11,9 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
 @Component
-public class schnittservice {
+public class SchnittServiceNoten {
 
-    private static final Logger log = LoggerFactory.getLogger(schnittservice.class);
+    private static final Logger log = LoggerFactory.getLogger(SchnittServiceNoten.class);
 
     private List<Double> notenListe = new ArrayList<>();
 
